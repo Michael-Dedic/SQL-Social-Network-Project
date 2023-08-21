@@ -1,1 +1,10 @@
+--Q1 Find the names of all students who are friends with someone named Gabriel.
 
+--A1
+
+select distinct name
+from(
+select ID
+from Friend, Highschooler
+where Friend.ID1 = Highschooler.ID and name = 'Gabriel') H, Friend, Highschooler
+where Friend.ID1 = Highschooler.ID and H.ID = Friend.ID2
