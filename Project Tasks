@@ -66,6 +66,12 @@ where Highschooler.ID = Likes.ID1 and Likes.ID2 not in (select ID1 from Likes)) 
 where Highschooler.ID = G.ID2
 
 
+--Q6 Find names and grades of students who only have friends in the same grade. Return the result sorted by grade, then by name within each grade.
+
+
+--A6
+
+
 
 
 
