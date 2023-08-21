@@ -57,6 +57,14 @@ where Highschooler.ID not in (select ID1 from Likes) and Highschooler.ID not in 
 
 --A5
 
+select G.name, G.grade, Highschooler.name, Highschooler.grade
+from(
+select grade,name,ID, ID2 
+from Highschooler, Likes
+where Highschooler.ID = Likes.ID1 and Likes.ID2 not in (select ID1 from Likes)) G,Highschooler
+
+where Highschooler.ID = G.ID2
+
 
 
 
