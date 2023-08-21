@@ -41,6 +41,10 @@ where G.ID = Likes.ID2 and G.ID2 = Likes.ID1 and Highschooler.ID = Likes.ID1
 and Length(G.name)<= Length(Highschooler.name)
 
 
+--Q4 Find all students who do not appear in the Likes table (as a student who likes or is liked) and return their names and grades. Sort by grade, then by name within each grade.
+
+--A4
+
 
 
 
