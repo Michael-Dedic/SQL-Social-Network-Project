@@ -28,6 +28,17 @@ where G.LIKES = Highschooler.ID and G.grade - Highschooler.grade >=2;
 
 --A3
 
+select Highschooler.name as Name, Highschooler.grade, G.name,G.grade
+from(
+select grade,name,ID, ID2 
+from Highschooler, Likes
+where Highschooler.ID = Likes.ID1
+order by name
+)G,Likes,Highschooler
+
+
+where G.ID2 = Likes.ID1 and G.ID = Likes.ID2 and Highschooler.ID = Likes.ID1 and G.ID <= Highschooler.ID 
+
 
 
 
