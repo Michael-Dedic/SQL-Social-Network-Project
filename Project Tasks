@@ -45,6 +45,11 @@ and Length(G.name)<= Length(Highschooler.name)
 
 --A4
 
+select distinct name, grade
+from Highschooler, Likes
+where Highschooler.ID not in (select ID1 from Likes) and Highschooler.ID not in (select ID2 from Likes)
+
+
 
 
 
