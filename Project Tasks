@@ -23,4 +23,17 @@ where Highschooler.ID = Likes.ID1) G,Highschooler
 where G.LIKES = Highschooler.ID and G.grade - Highschooler.grade >=2;
 
 
+--Q3 For every pair of students who both like each other, return the name and grade of both students. Include each pair only once, with the two names in alphabetical order.
+
+
+--A3
+
+
+
+
+
+
+
+
+
 
