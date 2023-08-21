@@ -37,7 +37,9 @@ order by name
 )G,Likes,Highschooler
 
 
-where G.ID2 = Likes.ID1 and G.ID = Likes.ID2 and Highschooler.ID = Likes.ID1 and G.ID <= Highschooler.ID 
+where G.ID = Likes.ID2 and G.ID2 = Likes.ID1 and Highschooler.ID = Likes.ID1 
+and Length(G.name)<= Length(Highschooler.name)
+
 
 
 
