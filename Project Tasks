@@ -116,5 +116,18 @@ from Highschooler;
 
 --A9
 
+select name,grade
+
+from(
+select name, grade, count(*) as Counting
+from Highschooler, Likes
+where Highschooler.ID = Likes.ID2
+group by name,grade) 
+
+where Counting>1
+
+
+
+
 
 
