@@ -69,7 +69,22 @@ where Highschooler.ID = G.ID2
 --Q6 Find names and grades of students who only have friends in the same grade. Return the result sorted by grade, then by name within each grade.
 
 
---A6
+--A6 -- Unfinished
+
+select *
+from(
+select distinct name1,ID1,grade1
+from(
+select Group1.ID as ID1,Group1.name as name1,Group1.grade as grade1,
+Highschooler.ID as ID2, Highschooler.name as name2, Highschooler.grade as grade2
+from(
+
+select ID, name, grade,ID2
+from Highschooler, Friend
+where Highschooler.ID = Friend.ID1 ) Group1,Highschooler
+
+where Highschooler.ID = Group1.ID2) Group2
+where grade1<>grade2) Group3
 
 
 
