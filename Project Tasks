@@ -143,10 +143,9 @@ where ID in (select ID from Highschooler where grade = 12)
 
 --A2
 
-
-
-
-
+delete from Likes
+where ID1 in(select Likes.ID1 from Likes, Friend where Likes.ID1= Friend.ID1 and Likes.ID2 = Friend.ID2) and ID1 not in 
+(select Likes.ID1 from Likes, Likes L2 where Likes.ID1= L2.ID2 and Likes.ID2 = L2.ID1)
 
 
 
