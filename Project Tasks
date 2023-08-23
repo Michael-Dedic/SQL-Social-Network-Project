@@ -127,6 +127,36 @@ group by name,grade)
 where Counting>1
 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--Data Modification Section
+
+--Q1 It's time for the seniors to graduate. Remove all 12th graders from Highschooler.
+
+--A1
+
+delete from Highschooler
+where ID in (select ID from Highschooler where grade = 12)
+
+
+--Q2 If two students A and B are friends, and A likes B but not vice-versa, remove the Likes tuple.
+
+--A2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
