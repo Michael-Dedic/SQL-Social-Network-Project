@@ -69,7 +69,7 @@ where Highschooler.ID = G.ID2
 --Q6 Find names and grades of students who only have friends in the same grade. Return the result sorted by grade, then by name within each grade.
 
 
---A6 -- Unfinished
+--A6 
 
 select name, grade 
 from Highschooler H1
